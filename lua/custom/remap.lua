@@ -18,8 +18,8 @@ function M.setup()
 
   vim.keymap.set('x', '<leader>p', [["_dP]])
 
-  vim.keymap.set('n', '<Tab>', '<CMD>cnext<CR>', { noremap = true, silent = true })
-  vim.keymap.set('n', '<S-Tab>', '<CMD>cprev<CR>', { noremap = true, silent = true })
+  -- vim.keymap.set('n', '<Tab>', '<CMD>cnext<CR>', { noremap = true, silent = true })
+  -- vim.keymap.set('n', '<S-Tab>', '<CMD>cprev<CR>', { noremap = true, silent = true })
 
   -- -dv to not focus on trerminal on open
   vim.keymap.set('n', '<leader>st', '<CMD>!tmux split-window -v -l 15<CR>', { silent = true })

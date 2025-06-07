@@ -12,8 +12,10 @@ return {
   require 'custom.plugins.undotree',
   require 'custom.plugins.colorizer',
   require 'custom.plugins.rainbow-brackets',
+  require 'custom.plugins.lualine',
+  require 'custom.plugins.trouble',
   -- require 'custom.plugins.copilot',
-  --require 'custom.plugins.neotree',
+  -- require 'custom.plugins.neotree',
   --  require 'custom.plugins.vim-go',
   --  require 'custom.plugins.toggleterm',
 }
