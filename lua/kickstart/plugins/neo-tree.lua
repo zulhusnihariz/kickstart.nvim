@@ -22,11 +22,13 @@ return {
       },
     },
   },
+
   event_handlers = {
-    event = 'file_opened',
-    handler = function(file_path)
+    event = 'file_open_requested',
+    handler = function()
       --auto close
-      require('neo-tree').close_all()
+      vim.cmd 'Neotree close'
+      --require('neo-tree.command').execute { action = 'close' }
     end,
   },
 }

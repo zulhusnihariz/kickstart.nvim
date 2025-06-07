@@ -3,9 +3,23 @@
 -- config. This will add also the recommended keymaps.
 
 return {
-  {
+  -- Here is a more advanced example where we pass configuration
+  -- options to `gitsigns.nvim`.
+  -- See `:help gitsigns` to understand what the configuration keys do
+  { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
+      signs = {
+        add = { text = '+' },
+        change = { text = '~' },
+        -- delete = { text = '_' },
+        -- topdelete = { text = '‾' },
+        -- changedelete = { text = '~' },
+        delete = { text = ' ' },
+        topdelete = { text = ' ' },
+        changedelete = { text = ' ' },
+      },
+
       on_attach = function(bufnr)
         local gitsigns = require 'gitsigns'
 
@@ -15,7 +29,7 @@ return {
           vim.keymap.set(mode, l, r, opts)
         end
 
-        -- Navigation
+        -- Navigation, numhl = '', linehl = ''
         map('n', ']c', function()
           if vim.wo.diff then
             vim.cmd.normal { ']c', bang = true }
