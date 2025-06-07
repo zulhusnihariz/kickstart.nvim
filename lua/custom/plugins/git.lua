@@ -23,7 +23,7 @@ return {
     end,
     keys = {
       { '<leader>ng', '<cmd>Neogit<cr>', desc = 'NeoGit' },
-      { 'dc', '<cmd>DiffviewClose<cr>', desc = 'Close diffview' },
+      { 'dq', '<cmd>DiffviewClose<cr>', desc = 'Close diffview' },
     },
   },
   {

@@ -12,12 +12,13 @@ return {
       signs = {
         add = { text = '+' },
         change = { text = '~' },
-        -- delete = { text = '_' },
-        -- topdelete = { text = '‾' },
-        -- changedelete = { text = '~' },
-        delete = { text = ' ' },
-        topdelete = { text = ' ' },
-        changedelete = { text = ' ' },
+        delete = { text = '_' },
+        topdelete = { text = '‾' },
+        changedelete = { text = '~' },
+      },
+      preview_config = {
+        -- Options passed to nvim_open_win
+        style = 'minimal',
       },
 
       on_attach = function(bufnr)
@@ -69,6 +70,9 @@ return {
         -- Toggles
         map('n', '<leader>tb', gitsigns.toggle_current_line_blame, { desc = '[T]oggle git show [b]lame line' })
         map('n', '<leader>tD', gitsigns.preview_hunk_inline, { desc = '[T]oggle git show [D]eleted' })
+
+        local set = vim.opt -- set options
+        set.fillchars = set.fillchars + 'diff: '
       end,
     },
   },
