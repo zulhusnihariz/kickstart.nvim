@@ -14,6 +14,7 @@ return {
   require 'custom.plugins.rainbow-brackets',
   require 'custom.plugins.lualine',
   require 'custom.plugins.trouble',
+  require 'custom.plugins.kulala',
   -- require 'custom.plugins.copilot',
   -- require 'custom.plugins.neotree',
   --  require 'custom.plugins.vim-go',

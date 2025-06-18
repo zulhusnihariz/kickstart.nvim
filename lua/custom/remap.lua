@@ -22,7 +22,7 @@ function M.setup()
   -- vim.keymap.set('n', '<S-Tab>', '<CMD>cprev<CR>', { noremap = true, silent = true })
 
   -- -dv to not focus on trerminal on open
-  vim.keymap.set('n', '<leader>st', '<CMD>!tmux split-window -v -l 15<CR>', { silent = true })
+  vim.keymap.set('n', '<leader>st', '<CMD>!tmux split-window -dv -l 15<CR>', { silent = true })
   vim.keymap.set('n', '<leader>ms', '<CMD>Telescope tmux sessions<CR>', { silent = true })
 
   vim.keymap.set('n', 'gh', function()
